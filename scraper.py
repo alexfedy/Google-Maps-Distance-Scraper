@@ -29,7 +29,8 @@ class MapScraper:
     def _get_urls(self):
         urls = []
         for address in addresses:
-            sleep(1)
+            sleep(2)
+            self.driver.find_element_by_id("searchboxinput").click()
             self.driver.find_element_by_id("searchboxinput").send_keys(address)
             sleep(1)
             self.driver.find_element_by_id("searchbox-searchbutton").click()
