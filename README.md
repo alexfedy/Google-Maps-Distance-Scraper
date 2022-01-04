@@ -1,5 +1,8 @@
-Google Maps Distance Scraper:
+Google Maps Distance Scraper
+
 A python script that scrapes data from google maps
+
+Returns a plot that represents the shortest route between addresses
 
 Steps to use the bot:
 1. Download chromedriver
