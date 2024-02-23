@@ -17,27 +17,27 @@ class MapScraper:
 
     def _get_home(self):
         sleep(1)
-        self.driver.find_element_by_id("searchboxinput").send_keys(home)
+        self.driver.find_element("id", "searchboxinput").send_keys(home)
         sleep(3)
-        self.driver.find_element_by_id("searchbox-searchbutton").click()
+        self.driver.find_element("id", "searchbox-searchbutton").click()
         sleep(3)
         home_url = self.driver.current_url
         sleep(1)
-        self.driver.find_element_by_id("searchboxinput").clear()
+        self.driver.find_element("id", "searchboxinput").clear()
         return home_url
 
     def _get_urls(self):
         urls = []
         for address in addresses:
             sleep(2)
-            self.driver.find_element_by_id("searchboxinput").click()
-            self.driver.find_element_by_id("searchboxinput").send_keys(address)
+            self.driver.find_element("id", "searchboxinput").click()
+            self.driver.find_element("id", "searchboxinput").send_keys(address)
             sleep(1)
-            self.driver.find_element_by_id("searchbox-searchbutton").click()
+            self.driver.find_element("id", "searchbox-searchbutton").click()
             sleep(3)
             urls.append(self.driver.current_url)
             sleep(1)
-            self.driver.find_element_by_id("searchboxinput").clear()
+            self.driver.find_element("id", "searchboxinput").clear()
         return urls
 
     def _grabURLS(self):

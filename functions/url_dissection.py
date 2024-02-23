@@ -4,7 +4,7 @@ def _url_dissection(urls):
         url = url.split("/")[5:]
         Addy = url[0].replace("+", " ")
         url = url[1].replace("@", "")
-        url = url.split(',')
+        url = url.split(",")
         url.pop()
         lat = float(url[0])
         long = float(url[1])
